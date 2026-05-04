@@ -1,23 +1,17 @@
-conf.d/README
+# Rubisco Biochemical Landscape — Analysis
 
-Each file in this directory is a fontconfig configuration file.  Fontconfig
-scans this directory, loading all files of the form [0-9][0-9]*.conf.
-These files are normally installed in C:/Users/ilija/anaconda3/Library/share/fontconfig/conf.avail
-and then symlinked here, allowing them to be easily installed and then
-enabled/disabled by adjusting the symlinks.
+Reproduction of key figures from:
+Prywes et al. (2025) "A map of the rubisco biochemical landscape." Nature.
 
-The files are loaded in numeric order, the structure of the configuration
-has led to the following conventions in usage:
+## Contents
+- `rubisco_analiza.ipynb` — fitness vs KC scatter plot
+- `HeatmapPractice.ipynb` — fitness heatmap of the active site region (Fig. 1g)
 
- Files beginning with:	Contain:
- 
- 00 through 09		Font directories
- 10 through 19		system rendering defaults (AA, etc)
- 20 through 29		font rendering options
- 30 through 39		family substitution
- 40 through 49		generic identification, map family->generic
- 50 through 59		alternate config file loading
- 60 through 69		generic aliases, map generic->family
- 70 through 79		select font (adjust which fonts are available)
- 80 through 89		match target="scan" (modify scanned patterns)
- 90 through 99		font synthesis
+## Dataset
+Supplementary Data 2 from the original paper — enrichments, Vmax and KC values 
+for 8,760 single amino acid mutants of R. rubrum rubisco.
+
+## Key findings reproduced
+- Bimodal fitness distribution (dead vs neutral mutations)
+- A102Y and V266T as improved CO2 affinity mutants
+- Active site positions (K166, K191, K329) show near-zero fitness tolerance
